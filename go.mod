@@ -1,4 +1,4 @@
-module temporal_proofs
+module temporal-proofs
 
 go 1.20
 

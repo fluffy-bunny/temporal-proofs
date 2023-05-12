@@ -52,6 +52,8 @@ func DoSomethingsWorkflow(ctx workflow.Context, request *DoSomethingsWorkflowReq
 			Name: names[i],
 		}).Get(ctx, &response)
 		log.Info().Interface("response", response).Msg("response")
+
+		workflow.Sleep(ctx, time.Second) // does this deydrate the workflow?
 	}
 
 	if err != nil {
